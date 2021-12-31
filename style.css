@@ -1,4 +1,52 @@
-body {background-color:tan;}
-h1{color:green;}
+/* Written by Asutosh Variar, 2021 */
+/* Everything other than the calculator div itself will be colored black */
+body {
+    background-color:black;
+    /* */
+    font-family: Arial;
+    font-style: bold;
+}
 
+/* The calculator div itself will be the only visible object */
+#calc{
+    background-color: white;
+    /* Curves borders */
+    border-radius: 25px;
+    width: 520px;
+    /* Centers the calculator */
+    margin: 0 auto;
+    /* Decreases distance between each br */
+    line-height: 10px;
+}
 
+h1{
+    color:grey;
+    /* Sets font to client-requested style */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 50px;
+    padding-left: 15px;
+}
+
+/* # used to signify selection by ID */
+#principal{
+    margin-left: 50px;
+}
+
+#rate{
+    margin-left: 12px;
+}
+
+#numList{
+    margin-left: 18px;
+}
+
+/* . used to signify selection by class */
+.text {
+    margin-left: 100px;
+}
+
+button {
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 11px;
+}

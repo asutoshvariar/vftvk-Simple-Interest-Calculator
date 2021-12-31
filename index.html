@@ -1,16 +1,48 @@
+<!--Written by Asutosh Variar, 2021-->
+<!DOCTYPE html>
 <html>
+    <!--Head used to add CSS and JS to webpage-->
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+    <!--onload function used to show value immediately-->
+    <body onload="ratedisp.value = parseFloat(rate.value).toFixed(2) + '%'">
+        <!--ID given to div for common features-->
+        <div id="calc">
+            <!--Heading-->
+            <h1>Simple Interest Calculator</h1>
+            <!--Input fields and text-->
+            <br> <span class=text style="margin-bottom: 1px">Amount</span> <input type="number" id="principal"> </br>
+            <br> <span class="text">Interest Rate</span> <input type="range" min="0.50" max="20" step="0.25" id="rate" oninput="updateRate()"> <output id="ratedisp"></output> </br>
+            <br> <span class="text">No. of Years</span>
+                <!--Used to select years; could be futher improved with JQuery--> 
+                <select id="numList">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+                
+            </br>
+            <!--Button for submitting variables and calling compute() function-->
+            <button onclick="compute()">Compute Interest</button>
+            <!--Result div, filled in through script-->
+            <div id="result" class="text"></div>
+            <!--Copyright text-->
+            <p style="text-align:left; padding-left: 15px; padding-bottom: 4%;"><span style="font-size: 22px; vertical-align: -2px">©</span> Everyone Can Get Rich</p>
+        </div>
     </body>
 </html>
